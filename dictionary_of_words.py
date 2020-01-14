@@ -32,7 +32,7 @@ Loop over the dictionary to get the following output:
 
 for word in word_definitions:
     definition = word_definitions[word]
-    print(f"The definition of {word} is :\n {definition}")
+    print(f"The definition of {word} is {definition} \n")
     
     
     
