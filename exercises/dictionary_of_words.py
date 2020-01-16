@@ -12,8 +12,8 @@ word_definitions['communication'] = 'the imparting or exchanging of information 
 Add several more words and their definitions
    Example: word_definitions["Awesome"] = "The feeling of students when they are learning Python"
 """
-# print(word_definitions['reuse'])
-# print(word_definitions['cost'])
+
+word_definitions['run'] = 'move at a speed faster than a walk, never having both or all the feet on the ground at the same time.'
 
 
 
@@ -22,6 +22,8 @@ Use square bracket lookup to get the definition of two
 words and output them to the console with `print()`
 """
 
+print(word_definitions['run'], '\n')
+print(word_definitions['cost'])
 
 """
 Loop over the dictionary to get the following output:
