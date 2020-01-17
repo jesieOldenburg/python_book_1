@@ -27,9 +27,9 @@ create_purchase_list('PEP', 100, '22-SEP-2015', 74)
 # print('\nPurchase list ::', purchase_list)
 
 """
-Create a purchase history report that computes the full purchase price (shares times dollars) for each block of stock and uses the stockDict to look up the full company name. This is the basic relational database join algorithm between two tables.
+    Create a purchase history report that computes the full purchase price (shares times dollars) for each block of stock and uses the stockDict to look up the full company name. This is the basic relational database join algorithm between two tables.
 
-Example output for one block: I purchased General Electric stock for $4800
+    Example output for one block: I purchased General Electric stock for $4800
 """
 
 def generate_single_stock_report():
@@ -67,9 +67,8 @@ generate_single_stock_report()
     Total value of stock in portfolio: $16000
 """
 
+combined_stocks = dict()
 def combine_reports_to_dict():
-    combined_stocks = dict()
-
     for k in purchase_list:
         # print(purchase_list[:], '\n')
         key = k[0]
@@ -79,7 +78,10 @@ def combine_reports_to_dict():
         if key not in combined_stocks:
             combined_stocks[f'{key}'] = vals
         else:
-            combined_stocks[f'{key}'] = purchase_list[:]
+            combined_stocks[f'{key}'] = purchase_list[1:]
             pass
-        print('\n', combined_stocks)
+        # print('\n', combined_stocks)
+    # print('\n', combined_stocks)
+    return combined_stocks
 combine_reports_to_dict()
+print(combined_stocks.get('TGT')) # Should return 2 tuples with info for TGT
