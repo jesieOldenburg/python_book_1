@@ -89,8 +89,9 @@ combine_reports_to_dict()
 def create_full_portfolio_list(dict):
     print(dict, '\n')
     for k in dict.items(): # Acess all of the items in the dict
-        print('THIS IS K', dict.items())
-        print(f'{k[1][1][0]} shares of {k[0]} at {k[1][1][2]} dollars each on {k[1][1][1]}' )
+        print('THIS IS K', k[1][])
+        stock_name = k[0]
+        # print(f'{k[1][1][0]} shares of {k[0]} at {k[1][1][2]} dollars each on {k[1][1][1]}' )
     pass
 
 create_full_portfolio_list(combined_stocks)
