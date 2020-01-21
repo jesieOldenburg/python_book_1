@@ -93,15 +93,29 @@ The keys in the make dictionary will be the models, and the value will be a list
 
 car_inventory = dict()
 
+
+
+
 def assign_colors(model_color_id, key_one, key_two):
+    
+
+    
     for color in colors:
         color_name = color[1]
         color_id = color[0]
         colors_match = model_color_id == color_id
         # print(colors_match)
         if colors_match:
-            car_inventory[key_one][key_two] = color_name
+            print('hell yea')
+            # car_inventory[key_one][key_two] = color_name
         pass
+
+        for pair in available_car_colors:
+            model_match_num = pair[0]
+            color_name_code = pair[1]
+            if model_match_num == color_name_code:
+                pass
+            pass
             
 
 
@@ -123,7 +137,7 @@ def build_car_inventory(makes, model):
             # print(makes)
             if model_id == make_id:
                 car_inventory[make_primary_key][model_primary_key] = list()
-            # assign_colors(model_color_id, make_primary_key, model_primary_key)
+            assign_colors(model_color_id, make_primary_key, model_primary_key)
     return car_inventory
     pass
 build_car_inventory(makes, models)
