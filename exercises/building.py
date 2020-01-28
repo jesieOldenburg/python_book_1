@@ -56,6 +56,8 @@ jesie = Customer('Jesie', 'Oldenburg')
 tony = Customer('Tony', 'Hanson')
 
 usaa.customers.append(jesie)
+usaa.customers.append(tony)
+
 for customer in usaa.customers:
     pass
     print(f'{customer.first_name} {customer.last_name} is a customer of {usaa.bank_name}...')
