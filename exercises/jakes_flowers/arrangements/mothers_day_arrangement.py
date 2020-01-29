@@ -1,6 +1,6 @@
 from . import Arrangement
-
-class Mothers_day_arrangement(Arrangement):
+from interfaces.not_refrigerated import INotRefrigerated
+class Mothers_day_arrangement(Arrangement, INotRefrigerated):
     """
         A class used to represent a arrangement of flowers
         ...
@@ -33,6 +33,7 @@ class Mothers_day_arrangement(Arrangement):
     
     def __init__(self):
         super().__init__()
+        INotRefrigerated.__init__(self)
         self.name = "Mother's Day Bouquet"
         self.stem_length = 7
         
@@ -40,3 +41,10 @@ class Mothers_day_arrangement(Arrangement):
     def display_flowers(self):
         print(f'Your {self.name} contains => {self.print_flowers}')
         
+    def add_flower(self, flower):
+        try:
+            if flower.refrigerated == False:
+                self.flower_list.append(flower)
+                print(f'You added a {flower.name} to the {self.name}')
+        except AttributeError:
+            raise AttributeError("Cannot place a non refrigerated flower into a {self.name}")
