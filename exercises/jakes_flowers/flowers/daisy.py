@@ -1,7 +1,9 @@
 from . import Flower
+from interfaces import INotRefrigerated
 
-class Daisy(Flower):
+class Daisy(Flower, INotRefrigerated):
     def __init__(self):
+        INotRefrigerated.__init__(self)
         self.name = "Daisy"
         
     def __str__(self):

@@ -47,4 +47,4 @@ class Mothers_day_arrangement(Arrangement, INotRefrigerated):
                 self.flower_list.append(flower)
                 print(f'You added a {flower.name} to the {self.name}')
         except AttributeError:
-            raise AttributeError("Cannot place a non refrigerated flower into a {self.name}")
+            raise AttributeError(f'You CANNOT add a refrigerated flower to the {self.name}')

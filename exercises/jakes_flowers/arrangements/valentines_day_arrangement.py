@@ -41,11 +41,10 @@ class Valentines_day_arrangement(Arrangement, IRefrigerated):
     def display_flowers(self):
         print(f'Your {self.name} contains => {self.print_flowers}')
         
-    # TODO: Add conditional duck typing to check if flowers are able to be refrigerated
     def add_flower(self, flower):
         try:
             if flower.refrigerated:
                 self.flower_list.append(flower)
-                print(f'You have added a {flower.name} to the {self.name} your bouquet now contains {len(self.flower_list)}')
+                # print(f'You have added a {flower.name} to the {self.name} your bouquet now contains {len(self.flower_list)}')
         except AttributeError:
-            raise AttributeError("Cannot place a non refrigerated flower into a {self.name}")
+            raise AttributeError(f"Cannot place a non refrigerated flower into a {self.name}")
