@@ -1,8 +1,8 @@
 from . import Flower
-from interfaces import IRefrigerated
-class Baby_breath(Flower, IRefrigerated):
+from interfaces import INotRefrigerated
+class Baby_breath(Flower, INotRefrigerated):
     def __init__(self):
-        IRefrigerated.__init__(self)
+        INotRefrigerated.__init__(self)
         self.name = "Baby's Breath"
         
     def __str__(self):

@@ -5,38 +5,29 @@ from flowers import Flower, Rose, Daisy, Alstroemeria, Lilly, Baby_breath, Poppy
 from arrangements import Mothers_day_arrangement, Valentines_day_arrangement, Arrangement
 
 # daisies, baby's breath, and poppies NOT REFRIGERATED
-bouquet_one = Mothers_day_arrangement() # add a rose, should throw an err
+mothers_day_bouquet = Mothers_day_arrangement() # Instantiate the mothers day bouquet
+# Create instances of the flowers allowed in the arrangement
 poppy = Poppy()
 daisy = Daisy()
-babyies_breath = Baby_breath()
+babies_breath = Baby_breath()
+test_rose = Rose() # Create an instance of a flower that should not be allowed in mothers day arrangement 
 
-bouquet_one.add_flower(daisy)
-bouquet_one.add_flower(babyies_breath)
-bouquet_one.add_flower(poppy)
+# Add the newly created flowers to the bouquet
+mothers_day_bouquet.add_flower(daisy)
+mothers_day_bouquet.add_flower(babies_breath)
+mothers_day_bouquet.add_flower(poppy)
 
-"""VALENTINES BOUQUET
-"""
+mothers_day_bouquet.add_flower(test_rose) # The flower is not added into the arrangement
+# TODO: Adk why the AttributeError is not showing.
+
 vday_bouquet = Valentines_day_arrangement() # add a poppy, should throw an err
 
 rose = Rose()
 alstro = Alstroemeria()
 lilly = Lilly()
+
 # Rose, Alstr, lilly refrigerated
 vday_bouquet.add_flower(rose)
 vday_bouquet.add_flower(alstro)
 vday_bouquet.add_flower(lilly)
 vday_bouquet.add_flower(poppy)
-vday_bouquet.display_flowers()
-
-
-# for flower in vday_bouquet.flower_list:
-#     print(flower.name)
-#     pass
-
-
-# print("\nRose __dict__", rose.__dict__) Accessing an OBJECTS __dict__ method returns it props
-
-# print(rose.available_colors)
-# for color in rose.available_colors:
-#     diff_color_rose = Rose(color)
-#     print(diff_color_rose)
