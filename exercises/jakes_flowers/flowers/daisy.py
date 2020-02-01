@@ -7,4 +7,4 @@ class Daisy(Flower, INotRefrigerated):
         self.name = "Daisy"
         
     def __str__(self):
-        return f'You now have a {self.name}'
+        return f'A {self.name}\n'

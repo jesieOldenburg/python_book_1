@@ -36,11 +36,7 @@ class Mothers_day_arrangement(Arrangement, INotRefrigerated):
         INotRefrigerated.__init__(self)
         self.name = "Mother's Day Bouquet"
         self.stem_length = 7
-        
-        
-    def display_flowers(self):
-        print(f'Your {self.name} contains => {self.print_flowers}')
-        
+       
     def add_flower(self, flower):
         try:
             if flower.refrigerated == False:

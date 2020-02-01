@@ -1,7 +1,6 @@
 from . import Arrangement
 from interfaces.refrigerated import IRefrigerated
 class Valentines_day_arrangement(Arrangement, IRefrigerated):
-
     """
         A class used to represent a arrangement of flowers
         ...
@@ -38,12 +37,9 @@ class Valentines_day_arrangement(Arrangement, IRefrigerated):
         self.name = "Valentines's Day Bouquet"
         self.stem_length = 7
         
-    def display_flowers(self):
-        print(f'Your {self.name} contains => {self.print_flowers}')
-        
     def add_flower(self, flower):
         try:
-            if flower.refrigerated:
+            if flower.refrigerated == True:
                 self.flower_list.append(flower)
                 # print(f'You have added a {flower.name} to the {self.name} your bouquet now contains {len(self.flower_list)}')
         except AttributeError:

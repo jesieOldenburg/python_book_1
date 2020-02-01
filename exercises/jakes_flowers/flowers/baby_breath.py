@@ -1,8 +1,9 @@
 from . import Flower
-
-class Baby_breath(Flower):
+from interfaces import INotRefrigerated
+class Baby_breath(Flower, INotRefrigerated):
     def __init__(self):
+        INotRefrigerated.__init__(self)
         self.name = "Baby's Breath"
         
     def __str__(self):
-        return f'You now have a {self.name}'
+        return f'A {self.name}\n'
