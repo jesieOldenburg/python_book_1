@@ -10,4 +10,4 @@ class Lilly(Flower):
         self.name = "Lilly"
         
     def __str__(self):
-        return f'The new instance of {self.name} has the following properties => {self.__dict__}\n'
+        return f'A {self.name}\n'
