@@ -7,7 +7,11 @@ class Instructor:
         self.specialty = specialty
         
     def assign_exercise(self, student, exercise):
+        # TODO: Duck type to prevent duplicate exercises being added to students exercise list
         student.current_exercises.append(exercise)
+        
+
+            
         
     def __str__(self):
         return f'Instructor {self.first_name} {self.last_name} is in {self.instructor_cohort}. Their specialty is {self.specialty}'
