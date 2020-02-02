@@ -9,7 +9,6 @@ class Instructor:
     def assign_exercise(self, student, exercise):
         # TODO: Duck type to prevent duplicate exercises being added to students exercise list
         student.current_exercises.append(exercise)
-        print(exercise.exercise_name)
         
 
             

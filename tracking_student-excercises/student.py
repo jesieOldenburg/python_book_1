@@ -7,7 +7,8 @@ class Student:
         self.current_exercises = list()
 
     def show_homework(self):
-        print(self.current_exercises)
+        for x in self.current_exercises:
+            print(x.exercise_name)
     
     def __str__(self):
         return f'{self.first_name} {self.last_name} is in Cohort {self.cohort_num}'
