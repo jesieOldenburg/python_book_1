@@ -6,11 +6,11 @@ class Cohort:
         
     def add_instructor(self, instructor):
         self.instructors_in_cohort.append(instructor)
-        print(f'{instructor.first_name} {instructor.last_name} was added to {self.cohort_name}')
+        # print(f'{instructor.first_name} {instructor.last_name} was added to {self.cohort_name}')
     
     def add_student(self, student):
         self.students_in_cohort.append(student)
-        print(f'\n{student.first_name} {student.last_name} was added to {self.cohort_name} as a student')
+        # print(f'\n{student.first_name} {student.last_name} was added to {self.cohort_name} as a student')
         
     def __str__(self):
         return f'{self.cohort_name}'

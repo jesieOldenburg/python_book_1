@@ -23,6 +23,7 @@ day_cohort_36.add_instructor(jenna)
 jesie = Student('Jesie', 'Oldenburg', 'jesieOldenburg', '36')
 john = Student('John', 'Long', 'jlongbrah', '36')
 ryan = Student('Ryan', 'Bishop', 'rybish', '36')
+guy = Student('Guy', 'Cherkeskey', 'guyChe', '36')
 
 # * Assign students to the cohorts
 day_cohort_36.add_student(jesie)
@@ -43,4 +44,24 @@ jisie.assign_exercise(jesie, party_time)
 jisie.assign_exercise(jesie, coins_to_cash)
 
 # Print the students homework to the console
-jesie.show_homework()
+# jesie.show_homework()
+
+students = list()
+
+students.append(jesie)
+students.append(john)
+students.append(ryan)
+
+exercises = list()
+
+exercises.append(fizzbuzz)
+exercises.append(reverse_string)
+exercises.append(party_time)
+exercises.append(coins_to_cash)
+
+for s in students:
+    student_name  = s.first_name + ' ' + s.last_name
+    print('s =>', student_name)
+    for x in exercises:
+        print(f'{student_name} is working on the {x.exercise_name} exercise')
+        pass
