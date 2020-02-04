@@ -1,10 +1,11 @@
+import pprint
 from student import Student
 from exercise import Exercise
 from cohort import Cohort
 from instructor import Instructor
 
-
-
+l1 = ['a', 'b', 'c','c']
+l2 = [1,2,3]
 
 # Create new instances of Cohorts
 day_cohort_36 = Cohort('Day Cohort 36')
@@ -43,17 +44,17 @@ coins_to_cash = Exercise('Coins to Cash', 'Python')
 # Assign exercises to students
 jisie.assign_exercise(jesie, fizzbuzz)
 jisie.assign_exercise(jesie, reverse_string)
-jenna.assign_exercise(jesie, party_time)
-jenna.assign_exercise(jesie, coins_to_cash)
-joe.assign_exercise(jesie, fizzbuzz)
-joe.assign_exercise(jesie, coins_to_cash)
+# jenna.assign_exercise(jesie, party_time)
+# jenna.assign_exercise(jesie, coins_to_cash)
+# joe.assign_exercise(jesie, fizzbuzz)
+# joe.assign_exercise(jesie, coins_to_cash)
 
 jisie.assign_exercise(guy, party_time)
 jisie.assign_exercise(guy, coins_to_cash)
-jenna.assign_exercise(guy, party_time)
-jenna.assign_exercise(guy, reverse_string)
-joe.assign_exercise(guy, fizzbuzz)
-joe.assign_exercise(guy, coins_to_cash)
+# jenna.assign_exercise(guy, party_time)
+# jenna.assign_exercise(guy, reverse_string)
+# joe.assign_exercise(guy, fizzbuzz)
+# joe.assign_exercise(guy, coins_to_cash)
 
 
 
@@ -63,8 +64,9 @@ joe.assign_exercise(guy, coins_to_cash)
 students = list()
 
 students.append(jesie)
-students.append(john)
-students.append(ryan)
+# students.append(john)
+# students.append(ryan)
+students.append(guy)
 
 exercises = list()
 
@@ -73,14 +75,10 @@ exercises.append(reverse_string)
 exercises.append(party_time)
 exercises.append(coins_to_cash)
 
-# ? What is the condition I need to check here?
-# I am iterating through the 
+
 for s in students:
-    # ! s == to an instance of a student
-    student_name  = s.first_name + ' ' + s.last_name
-    print(s.current_exercises)
-    # print('s =>', student_name)
-    for x in exercises:
-        print(x.exercise_name)
-        # print(f'{student_name} is working on the {x.exercise_name} exercise')
-        pass
+    s.show_homework()
+
+# * I need to loop through the values in the student list, and assign the student name to a variable
+# * Then I need to loop through the exercises list, and check if the exercise being checked on the current iteration is also in the student's current_exercises list.
+# * if it is True that the exercise is in the student's list, then print the exercises and the student name.
